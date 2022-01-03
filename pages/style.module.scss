@@ -1,0 +1,8 @@
+@import "styles/utils";
+
+.container {
+  @include media(">desktop") {
+    margin: 0 auto;
+    width: 1275px;
+  }
+}

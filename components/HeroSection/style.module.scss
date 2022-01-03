@@ -1,0 +1,130 @@
+@import "styles/utils";
+
+.container {
+  color: #FFFFFF;
+
+  @include media(">desktop") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 1275px;
+    grid-gap: 15px;
+  }
+
+  .mockupsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 40px 60px;
+
+    @include media(">desktop") {
+      width: 696px;
+      padding: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("/img/bg-mobile.svg") no-repeat;
+      background-size: cover;
+      content: "";
+      width: 100vw;
+      height: 100vh;
+
+      @include media(">desktop") {
+        background: url("/img/bg-desktop.svg") no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .mockups {
+      width: 296px;
+      height: 209px;
+      z-index: 1;
+
+      @include media(">desktop") {
+        width: 100%;
+        height: 100%;
+        max-width: 696px;
+        max-height: 493px;
+      }
+    }
+  }
+
+  .contentContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 35px;
+
+    @include media(">desktop") {
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      padding-top: 32px;
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 16px;
+      max-width: 304px;
+
+      @include media(">desktop") {
+        max-width: initial;
+        font-size: 40px;
+        line-height: 60px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 24px;
+      max-width: 304px;
+
+      @include media(">desktop") {
+        max-width: initial;
+        width: 520px;
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+
+    .registerButton {
+      background: #FFFFFF;
+      box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.269022);
+      border-radius: 20px;
+      border: 0;
+      outline: none;
+      font-size: 12px;
+      line-height: 18px;
+      color: #684BB1;
+      min-width: 200px;
+      min-height: 40px;
+
+      @include media(">desktop") {
+        min-width: 200px;
+        min-height: 56px;
+        font-size: 18px;
+        line-height: 27px;
+        box-shadow: 2px 4px 9px 3px rgba(0, 0, 0, 0.258633);
+        border-radius: 28px;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          color: #FFFFFF;
+          background: #E880E8;
+          box-shadow: 2px 4px 9px 3px rgba(0, 0, 0, 0.258633);
+        }
+      }
+    }
+  }
+}
