@@ -6,7 +6,9 @@ import Link from 'next/link';
 const Header = () => {
     return (
         <header className={styles.header}>
-            <Link href={'/'}>
+            <Link href={'/'}
+                  aria-label={'huddle'}
+            >
                 <a>
                     <Logo className={styles.logo} />
                 </a>

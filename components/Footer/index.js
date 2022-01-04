@@ -9,17 +9,23 @@ const Footer = () => {
         <footer>
             <ul className={styles.socialContainer}>
                 <li className={styles.socialItem}>
-                    <a href={'#'}>
+                    <a href={'#'}
+                       aria-label={'facebook'}
+                    >
                         <FacebookIcon className={styles.icon} />
                     </a>
                 </li>
                 <li className={styles.socialItem}>
-                    <a href={'#'}>
+                    <a href={'#'}
+                       aria-label={'twitter'}
+                    >
                         <TwitterIcon className={styles.icon} />
                     </a>
                 </li>
                 <li className={styles.socialItem}>
-                    <a href={'#'}>
+                    <a href={'#'}
+                       aria-label={'instagram'}
+                    >
                         <InstagramIcon className={styles.icon} />
                     </a>
                 </li>
